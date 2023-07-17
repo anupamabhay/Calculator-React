@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    margin: 0;
+    background: linear-gradient(to right, #7b3cd2, #058e5e);
+
+}
+
+.calculator-grid{
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+    justify-content: center;
+}
+
+.calculator-grid > button{
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    font-size: 1.25rem;
+    background-color: rgba(255, 255, 255, .7);
+}
+        
+.calculator-grid > button:hover, .calculator-grid > button:focus{
+    background-color: rgba(10, 10, 10, .25);
+    color: white;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .7rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.prev-operand{
+    color: rgba(242, 242, 242, 0.9);
+    font-size: 1.2rem;
+}
+
+.curr-operand{
+    color: rgba(255, 255, 255, .9);
+    font-size: 2.5rem;
+}
